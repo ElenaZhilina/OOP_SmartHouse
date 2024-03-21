@@ -40,4 +40,34 @@ public class Radio {
         }
     }
 
+    public int getSoundVolume() {
+        return soundVolume;
+    }
+
+    public void setSoundVolume(int newSoundVolume) {
+        soundVolume = newSoundVolume;
+    }
+
+    public void increaseSoundVolume(int iSoundVolume) {
+        int increase;
+        if (iSoundVolume < 100) {
+            increase = iSoundVolume + 1;
+            setSoundVolume(increase);
+        } else {
+            increase = iSoundVolume;
+            setSoundVolume(increase);
+        }
+    }
+
+    public void decreaseSoundVolume(int dSoundVolume) {
+        int decrease;
+        if (dSoundVolume > 0) {
+            decrease = dSoundVolume - 1;
+            setSoundVolume(decrease);
+        } else {
+            decrease = dSoundVolume;
+            setSoundVolume(decrease);
+        }
+    }
+
 }
