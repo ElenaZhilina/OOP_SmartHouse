@@ -14,6 +14,24 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetRadioNumberIfMoreThan9() {
+        Radio number = new Radio();
+        number.setCurrentRadioNumber(10);
+        int expected = 0;
+        int actual = number.getCurrentRadioNumber();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetRadioNumberIfLessThan0() {
+        Radio number = new Radio();
+        number.setCurrentRadioNumber(-1);
+        int expected = 0;
+        int actual = number.getCurrentRadioNumber();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetNextRadioNumber() {
         Radio number = new Radio();
         number.nextRadioNumber(1);
