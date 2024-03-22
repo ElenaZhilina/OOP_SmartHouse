@@ -68,36 +68,40 @@ public class RadioTest {
     }
 
     @Test
-    public void shoildIncreaseVolume() {
+    public void shouldIncreaseVolume() {
         Radio volume = new Radio();
-        volume.increaseSoundVolume(1);
+        volume.setSoundVolume(1);
+        volume.increaseSoundVolume();
         int expected = 2;
         int actual = volume.getSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shoildIncreaseVolumeIf100() {
+    public void shouldIncreaseVolumeIf100() {
         Radio volume = new Radio();
-        volume.increaseSoundVolume(100);
+        volume.setSoundVolume(100);
+        volume.increaseSoundVolume();
         int expected = 100;
         int actual = volume.getSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shoildDecreaseVolume() {
+    public void shouldDecreaseVolume() {
         Radio volume = new Radio();
-        volume.decreaseSoundVolume(1);
+        volume.setSoundVolume(1);
+        volume.decreaseSoundVolume();
         int expected = 0;
         int actual = volume.getSoundVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shoildDecreaseVolumeIf0() {
+    public void shouldDecreaseVolumeIf0() {
         Radio volume = new Radio();
-        volume.decreaseSoundVolume(0);
+        volume.setSoundVolume(0);
+        volume.decreaseSoundVolume();
         int expected = 0;
         int actual = volume.getSoundVolume();
         Assertions.assertEquals(expected, actual);
