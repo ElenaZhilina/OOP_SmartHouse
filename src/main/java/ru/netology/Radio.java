@@ -19,7 +19,7 @@ public class Radio {
     }
 
     public void nextRadioNumber() {
-        int next
+        int next;
         if (currentRadioNumber == 9) {
             next = 0;
             setCurrentRadioNumber(next);
@@ -30,7 +30,7 @@ public class Radio {
     }
 
     public void prevRadioNumber() {
-        int prev
+        int prev;
         if (currentRadioNumber == 0) {
             prev = 9;
             setCurrentRadioNumber(prev);
