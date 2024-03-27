@@ -18,24 +18,24 @@ public class Radio {
         currentRadioNumber = newCurrentRadioNumber;
     }
 
-    public void nextRadioNumber(int nCurrentRadioNumber) {
-        int next;
-        if (nCurrentRadioNumber == 9) {
+    public void nextRadioNumber() {
+        int next
+        if (currentRadioNumber == 9) {
             next = 0;
             setCurrentRadioNumber(next);
         } else {
-            next = nCurrentRadioNumber + 1;
+            next = currentRadioNumber + 1;
             setCurrentRadioNumber(next);
         }
     }
 
-    public void prevRadioNumber(int pCurrentRadioNumber) {
-        int prev;
-        if (pCurrentRadioNumber == 0) {
+    public void prevRadioNumber() {
+        int prev
+        if (currentRadioNumber == 0) {
             prev = 9;
             setCurrentRadioNumber(prev);
         } else {
-            prev = pCurrentRadioNumber - 1;
+            prev = currentRadioNumber - 1;
             setCurrentRadioNumber(prev);
         }
     }
@@ -54,7 +54,7 @@ public class Radio {
             } else {
                 soundVolume = newSoundVolume;
             }
-       }
+        }
 
     }
 
