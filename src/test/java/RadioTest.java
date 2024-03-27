@@ -34,7 +34,8 @@ public class RadioTest {
     @Test
     public void shouldSetNextRadioNumber() {
         Radio number = new Radio();
-        number.nextRadioNumber(1);
+        number.setCurrentRadioNumber(1);
+        number.nextRadioNumber();
         int expected = 2;
         int actual = number.getCurrentRadioNumber();
         Assertions.assertEquals(expected, actual);
@@ -43,7 +44,8 @@ public class RadioTest {
     @Test
     public void shouldSetNextRadioNumberIf9() {
         Radio number = new Radio();
-        number.nextRadioNumber(9);
+        number.setCurrentRadioNumber(9);
+        number.nextRadioNumber();
         int expected = 0;
         int actual = number.getCurrentRadioNumber();
         Assertions.assertEquals(expected, actual);
@@ -52,7 +54,8 @@ public class RadioTest {
     @Test
     public void shouldSetPrevRadioNumber() {
         Radio number = new Radio();
-        number.prevRadioNumber(1);
+        number.setCurrentRadioNumber(1);
+        number.prevRadioNumber();
         int expected = 0;
         int actual = number.getCurrentRadioNumber();
         Assertions.assertEquals(expected, actual);
@@ -61,7 +64,8 @@ public class RadioTest {
     @Test
     public void shouldSetPrevRadioNumberIf0() {
         Radio number = new Radio();
-        number.prevRadioNumber(0);
+        number.setCurrentRadioNumber(0);
+        number.prevRadioNumber();
         int expected = 9;
         int actual = number.getCurrentRadioNumber();
         Assertions.assertEquals(expected, actual);
