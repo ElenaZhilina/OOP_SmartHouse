@@ -3,7 +3,15 @@ package ru.netology;
 public class Radio {
     private int currentRadioNumber;
     private int soundVolume;
+    private int maxRadioNumber;
 
+    public Radio(int radioNumber) {
+        maxRadioNumber = radioNumber - 1;
+            }
+
+    public Radio() {
+        maxRadioNumber = 9;
+    }
     public int getCurrentRadioNumber() {
         return currentRadioNumber;
     }
@@ -12,7 +20,7 @@ public class Radio {
         if (newCurrentRadioNumber < 0) {
             return;
         }
-        if (newCurrentRadioNumber > 9) {
+        if (newCurrentRadioNumber > maxRadioNumber) {
             return;
         }
         currentRadioNumber = newCurrentRadioNumber;
@@ -20,7 +28,7 @@ public class Radio {
 
     public void nextRadioNumber() {
         int next;
-        if (currentRadioNumber == 9) {
+        if (currentRadioNumber == maxRadioNumber) {
             next = 0;
             setCurrentRadioNumber(next);
         } else {
@@ -32,7 +40,7 @@ public class Radio {
     public void prevRadioNumber() {
         int prev;
         if (currentRadioNumber == 0) {
-            prev = 9;
+            prev = maxRadioNumber;
             setCurrentRadioNumber(prev);
         } else {
             prev = currentRadioNumber - 1;
