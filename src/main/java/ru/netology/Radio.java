@@ -4,14 +4,16 @@ public class Radio {
     private int currentRadioNumber;
     private int soundVolume;
     private int maxRadioNumber;
+    private int maxSoundVolume;
 
     public Radio(int radioNumber) {
         maxRadioNumber = radioNumber - 1;
-            }
+    }
 
     public Radio() {
         maxRadioNumber = 9;
     }
+
     public int getCurrentRadioNumber() {
         return currentRadioNumber;
     }
@@ -48,6 +50,7 @@ public class Radio {
         }
     }
 
+
     public int getSoundVolume() {
 
         return soundVolume;
@@ -65,6 +68,7 @@ public class Radio {
         }
 
     }
+
 
     public void increaseSoundVolume() {
         int increase = soundVolume + 1;
